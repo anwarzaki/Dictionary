@@ -1,0 +1,99 @@
+:root{
+    --primary-color:#008080;
+    --bcg-color:#f5f5f5;
+    --padding: 20px;
+    --text-color:#fff;
+    --border-radius:5px;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, sans-serif;
+    background-color: var(--bcg-color);
+    width: 100vw;
+}
+header{
+        background-color:var(--primary-color) ;
+        padding: var(--padding);
+        color: var(--text-color);
+}
+header h1{
+    font-size: 2rem;
+}
+main{
+    height: 76vh;
+    padding: var(--padding);
+    max-width: 800px;
+    margin: 0 auto;
+    /* margin-bottom: 300px; */
+}
+main form{
+    display: flex;
+    justify-content: center;
+  }
+form input[type="text"],button,.result div a{
+    border: none;
+    font-size:1rem;
+    font-weight: 500;
+    border-radius: var(--border-radius);
+    padding: calc(var(--padding)/2);
+}
+form input[type="text"]{
+    flex-grow: 1;
+}
+form button{
+    background-color: var(--primary-color);
+    color: var(--bcg-color);
+    margin-left: 10px;
+    cursor: pointer;
+}
+footer{
+    background-color: var(--primary-color);
+    color: var(--bcg-color);
+    padding: var(--padding);
+    text-align: center;
+    font-size: 1rem;
+    position: fix;
+    width: 100%;
+    margin-left:1px ;
+}
+.result{
+    background-color: #fff;
+    padding: var(--padding);
+    border-radius: var(--border-radius);
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+.result p{
+    margin-top: 10px;
+}
+.result p[class="partOfSpeech"]{
+    font-style: italic;
+    color: #808080;
+    margin-top: 3px;
+}
+.result div{
+    margin-top: 20px;
+}
+.result div a{
+    
+    text-decoration: none;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+.result li{
+    margin-left: 20px;
+    padding:calc(var(--padding/6));
+}
+
+@media screen and (max-width:320px){
+    main form{
+        flex-direction: column;
+    }
+    button[type="submit"]{
+        margin-top: 10px;
+    }
+}
